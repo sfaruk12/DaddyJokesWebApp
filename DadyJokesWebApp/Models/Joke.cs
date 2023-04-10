@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Text.Json.Serialization;
 
 namespace DaddyJokesWebApp.Models
@@ -15,8 +16,8 @@ namespace DaddyJokesWebApp.Models
     }
     public class Body
     {
-        [JsonPropertyName("_id")]
-        public string Id { get; set; }
+        [DisplayName("Id")]
+        public string _id { get; set; }
         [JsonPropertyName("type")]
         public string Type { get; set; }
         [JsonPropertyName("setup")]

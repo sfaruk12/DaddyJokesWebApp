@@ -28,16 +28,14 @@ namespace DaddyJokesWebApp.Controllers
         public IActionResult RandomJoke()
         {
             var joke = _DaddyJokeservice.GetRandomJoke().Result;
-            throw new System.Exception();
-            //return View(joke);
+            return View(joke);
         }
         [HttpGet]
         [TypeFilter(typeof(DaddyJokesExceptionFilter))]
         public IActionResult RandomJokeCount()
         {
             var joke = _DaddyJokeservice.GetRandomJokeCount().Result;
-            //return View(joke);
-            throw new System.Exception();
+            return View(joke);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
