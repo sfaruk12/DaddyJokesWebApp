@@ -1,0 +1,38 @@
+﻿@model DaddyJokesWebApp.Models.Joke
+
+@{
+    ViewData["Title"] = "RandomJoke";
+}
+
+<h1>Random Joke</h1>
+
+<div>
+    <h4>Joke</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Body[0].Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Body[0].Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Body[0].Type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Body[0].Type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Body[0].Setup)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Body[0].Setup)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Body[0].Punchline)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Body[0].Punchline)
+        </dd>
+    </dl>
+</div>
